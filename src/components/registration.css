@@ -1,0 +1,211 @@
+/* Enhanced Registration Form CSS - Blue Theme */
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background-color: #f0f8ff;
+  margin: 0;
+  padding: 0;
+  min-height: 100vh;
+}
+
+.main-container {
+  width: 100%;
+  margin: 0;
+  padding: 0;
+  min-height: calc(100vh - 70px);
+  position: relative;
+  top: -70px;
+  padding-top: 70px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.registration-container {
+  background-color: #ffffff;
+  padding: 2.5rem;
+  border-radius: 12px;
+  box-shadow: 0 8px 20px rgba(30, 144, 255, 0.15);
+  width: 100%;
+  max-width: 550px;
+  margin: 2rem auto;
+  border: 1px solid rgba(135, 206, 250, 0.3);
+}
+
+h2 {
+  color: #1e90ff;
+  text-align: center;
+  margin: 0 0 1.5rem 0;
+  font-size: 1.75rem;
+  font-weight: 600;
+  position: relative;
+  padding-bottom: 0.5rem;
+}
+
+h2::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 60px;
+  height: 3px;
+  background: linear-gradient(90deg, #1e90ff, #87cefa);
+  border-radius: 3px;
+}
+
+.form-group {
+  margin-bottom: 1.8rem;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+label {
+  display: block;
+  margin-bottom: 0.5rem;
+  color: #4682b4;
+  font-size: 0.95rem;
+  font-weight: 500;
+  letter-spacing: 0.3px;
+}
+
+input[type="text"],
+input[type="tel"],
+input[type="email"],
+input[type="password"],
+select {
+  width: 100%;
+  padding: 0.75rem 1rem;
+  border: 1px solid #87cefa;
+  border-radius: 6px;
+  font-size: 1rem;
+  margin: 0;
+  box-sizing: border-box;
+  height: 46px;
+  color: #2c3e50;
+  background-color: #f8fbfe;
+  transition: all 0.3s ease;
+}
+
+input[type="text"]::placeholder,
+input[type="tel"]::placeholder,
+input[type="email"]::placeholder,
+input[type="password"]::placeholder {
+  color: #a0b8c8;
+  opacity: 1;
+}
+
+input[type="text"]:focus,
+input[type="tel"]:focus,
+input[type="email"]:focus,
+input[type="password"]:focus,
+select:focus {
+  border-color: #1e90ff;
+  outline: none;
+  box-shadow: 0 0 0 3px rgba(30, 144, 255, 0.2);
+  background-color: #ffffff;
+}
+
+input[type="submit"] {
+  width: 100%;
+  padding: 0.75rem;
+  border-radius: 6px;
+  font-size: 1rem;
+  cursor: pointer;
+  background: linear-gradient(135deg, #1e90ff, #1c86ee);
+  transition: all 0.3s ease;
+  border: none;
+  color: white;
+  margin-top: 1rem;
+  height: 46px;
+  font-weight: 600;
+  letter-spacing: 0.5px;
+  text-transform: uppercase;
+  box-shadow: 0 2px 10px rgba(30, 144, 255, 0.3);
+}
+
+input[type="submit"]:hover {
+  background: linear-gradient(135deg, #1c86ee, #1873cd);
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(30, 144, 255, 0.4);
+}
+
+input[type="submit"]:active {
+  transform: translateY(0);
+}
+
+select {
+  appearance: none;
+  background-image: url("data:image/svg+xml;charset=UTF-8,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='%231e90ff' stroke='%231e90ff' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3e%3cpolyline points='6 9 12 15 18 9'%3e%3c/polyline%3e%3c/svg%3e");
+  background-repeat: no-repeat;
+  background-position: right 1rem center;
+  background-size: 14px;
+  padding-right: 2.5rem;
+  height: 46px;
+  color: #2c3e50;
+  background-color: #f8fbfe;
+}
+
+.error-message {
+  color: #ff4500;
+  background-color: #fff0f0;
+  padding: 0.75rem;
+  border-radius: 6px;
+  margin-bottom: 1.5rem;
+  text-align: center;
+  font-size: 0.95rem;
+  border: 1px solid #ffcccc;
+  font-weight: 500;
+}
+
+.success-message {
+  color: #1e90ff;
+  background-color: #f0f8ff;
+  padding: 1rem;
+  border-radius: 6px;
+  margin: 1.5rem 0;
+  text-align: center;
+  font-size: 1rem;
+  font-weight: 500;
+  border: 1px solid #87cefa;
+}
+
+@media (max-width: 768px) {
+  .main-container {
+    min-height: calc(100vh - 80px);
+    padding-top: 80px;
+  }
+  
+  .registration-container {
+    padding: 1.75rem;
+    margin: 1.5rem auto;
+  }
+  
+  h2 {
+    font-size: 1.5rem;
+    margin-bottom: 1.25rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .registration-container {
+    padding: 1.5rem;
+    border-radius: 10px;
+  }
+  
+  input[type="text"],
+  input[type="tel"],
+  input[type="email"],
+  input[type="password"],
+  select {
+    padding: 0.65rem 0.9rem;
+    font-size: 0.95rem;
+    height: 42px;
+  }
+  
+  input[type="submit"] {
+    padding: 0.65rem;
+    font-size: 0.95rem;
+    height: 42px;
+  }
+}

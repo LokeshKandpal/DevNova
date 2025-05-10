@@ -1,0 +1,331 @@
+/* Scope all styles to the trainer-dashboard class */
+.trainer-dashboard {
+  font-family: Arial, sans-serif;
+  background-color: #f0f8ff;
+  margin: 0;
+  padding: 0;
+  min-height: 100vh;
+  width: 100%;
+}
+
+.trainer-dashboard .main-container {
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  width: 100%;
+  padding-top: 70px;
+  margin: 0;
+  min-height: calc(100vh - 70px);
+}
+
+.trainer-dashboard .trainer-dashboard-container {
+  display: flex;
+  width: 100%;
+  margin-top: 1rem;
+  background-color: #fff;
+}
+
+.trainer-dashboard .dashboard-container {
+  display: flex;
+  width: 100%;
+  margin: 0 auto;
+}
+
+.trainer-dashboard .sidebar {
+  width: 250px;
+  background-color: #f8f9fa;
+  padding: 1.5rem;
+  height: calc(100vh - 70px - 1rem);
+  position: sticky;
+  top: 70px;
+  overflow-y: auto;
+  flex-shrink: 0;
+}
+
+.trainer-dashboard .sidebar h3 {
+  color: #1e90ff;
+  margin-bottom: 1.5rem;
+  font-size: 1.2rem;
+  font-weight: 600;
+}
+
+.trainer-dashboard .sidebar-menu {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.trainer-dashboard .menu-item {
+  margin-bottom: 0.5rem;
+}
+
+.trainer-dashboard .menu-button {
+  width: 100%;
+  padding: 0.7rem;
+  border: none;
+  border-radius: 4px;
+  background-color: #e9ecef;
+  color: #333;
+  font-size: 1rem;
+  cursor: pointer;
+  text-align: left;
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.trainer-dashboard .menu-button:hover,
+.trainer-dashboard .menu-button.active {
+  background-color: #1e90ff;
+  color: #fff;
+}
+
+/* New styles for profile header and logout button */
+.trainer-dashboard .profile-content .profile-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 1rem;
+}
+
+.trainer-dashboard .profile-logout-button {
+  background-color: #ff4500;
+  color: #fff;
+  border: none;
+  border-radius: 4px;
+  padding: 0.5rem 1rem;
+  cursor: pointer;
+  font-size: 1.1rem;
+  transition: background-color 0.3s ease;
+}
+
+.trainer-dashboard .profile-logout-button:hover {
+  background-color: #d43f00;
+}
+
+/* Hide the old logout item in sidebar */
+.trainer-dashboard .logout-item {
+  display: none;
+}
+
+.trainer-dashboard .logout-item .menu-button,
+.trainer-dashboard .logout-button {
+  background-color: #ff4500;
+  color: #fff;
+}
+
+.trainer-dashboard .logout-item .menu-button:hover,
+.trainer-dashboard .logout-button:hover {
+  background-color: #d43f00;
+}
+
+/* Styles for the batch dropdown in the sidebar */
+.trainer-dashboard .batch-dropdown {
+  margin: 0.75rem 0;
+  padding-left: 0.5rem;
+}
+
+.trainer-dashboard .batch-dropdown select.batch-select {
+  width: 100%;
+  padding: 0.5rem;
+  border: 1px solid #d3d3d3;
+  border-radius: 4px;
+  font-size: 0.85rem;
+  background-color: #fff;
+  color: #333;
+  cursor: pointer;
+  appearance: none;
+  background-image: url('data:image/svg+xml;utf8,<svg fill="black" height="24" viewBox="0 0 24 24" width="24" xmlns="http://www.w3.org/2000/svg"><path d="M7 10l5 5 5-5z"/></svg>');
+  background-repeat: no-repeat;
+  background-position: right 0.5rem center;
+  background-size: 1rem;
+}
+
+.trainer-dashboard .batch-dropdown select.batch-select:focus {
+  outline: none;
+  border-color: #1e90ff;
+  box-shadow: 0 0 5px rgba(30, 144, 255, 0.3);
+}
+
+.trainer-dashboard .batch-dropdown select.batch-select option {
+  padding: 0.5rem;
+  white-space: normal;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  max-width: 200px;
+}
+
+.trainer-dashboard .batch-dropdown p {
+  font-size: 0.9rem;
+  color: #333;
+  margin: 0.5rem 0;
+}
+
+.trainer-dashboard .content-area {
+  flex: 1;
+  padding: 2rem;
+  background-color: #ffffff;
+  min-height: calc(100vh - 70px - 1rem);
+  border-left: 1px solid #e9ecef;
+  width: 100%;
+}
+
+.trainer-dashboard h2 {
+  color: #1e90ff;
+  margin-bottom: 0.75rem;
+  font-size: 1.5rem;
+  font-weight: 600;
+}
+
+.trainer-dashboard p {
+  color: #333;
+  font-size: 1rem;
+  line-height: 1.5;
+}
+
+.trainer-dashboard strong {
+  color: #4682b4;
+}
+
+.trainer-dashboard .error-message {
+  color: #ff4500;
+  background-color: #ffe4e1;
+  padding: 0.5rem;
+  border-radius: 4px;
+  margin-bottom: 1rem;
+  text-align: center;
+  font-size: 0.9rem;
+  border: 1px solid #ff6347;
+}
+
+/* Styles for Profile and Batches sections */
+.trainer-dashboard .profile-content,
+.trainer-dashboard .batches-content {
+  max-width: 800px; /* Increased max-width for a larger table */
+  margin: 0 auto;
+  line-height: 1.3;
+}
+
+.trainer-dashboard .profile-table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 0.5rem; /* Increased margin for better spacing */
+  font-size: 1rem; /* Increased font size for better readability */
+  border: 1px solid #d3d3d3;
+  border-radius: 5px;
+  overflow: hidden;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+}
+
+.trainer-dashboard .profile-table th,
+.trainer-dashboard .profile-table td {
+  padding: 0.75rem 1rem; /* Increased padding for larger cells */
+  text-align: left;
+  border-bottom: 1px solid #d3d3d3;
+  line-height: 1.2; /* Adjusted line-height for better text spacing */
+  height: 40px; /* Increased row height */
+  box-sizing: border-box;
+}
+
+.trainer-dashboard .profile-table th {
+  background-color: #1e90ff;
+  color: white;
+  font-weight: 600;
+  text-transform: uppercase;
+  font-size: 0.95rem; /* Slightly larger font for headers */
+}
+
+.trainer-dashboard .profile-table td {
+  background-color: #fff;
+  color: #333;
+}
+
+.trainer-dashboard .profile-table tr:nth-child(even) td {
+  background-color: #f8f9fa;
+}
+
+.trainer-dashboard .profile-table tr:last-child td {
+  border-bottom: none;
+}
+
+.trainer-dashboard .profile-table tr {
+  height: 40px; /* Increased row height */
+}
+
+.trainer-dashboard .profile-table tbody tr td {
+  margin: 0;
+  padding-top: 0.75rem;
+  padding-bottom: 0.75rem;
+}
+
+@media (max-width: 768px) {
+  .trainer-dashboard .trainer-dashboard-container,
+  .trainer-dashboard .dashboard-container {
+    flex-direction: column;
+    width: 100%;
+  }
+
+  .trainer-dashboard .sidebar {
+    width: 100%;
+    height: auto;
+    position: relative;
+    top: 0;
+    padding: 1rem;
+  }
+
+  .trainer-dashboard .content-area {
+    padding: 1rem;
+    border-left: none;
+    border-top: 1px solid #e9ecef;
+    width: 100%;
+  }
+
+  .trainer-dashboard h2 {
+    font-size: 1.3rem;
+  }
+
+  .trainer-dashboard .menu-button {
+    padding: 0.6rem;
+    font-size: 0.9rem;
+  }
+
+  .trainer-dashboard .profile-table th,
+  .trainer-dashboard .profile-table td {
+    padding: 0.5rem 0.75rem; /* Slightly reduced padding for smaller screens */
+    font-size: 0.9rem;
+    line-height: 1.2;
+    height: 36px; /* Slightly reduced row height for smaller screens */
+  }
+
+  .trainer-dashboard .profile-table tr {
+    height: 36px;
+  }
+
+  .trainer-dashboard .batch-dropdown select.batch-select {
+    width: 100%;
+  }
+
+  .trainer-dashboard .batch-dropdown select.batch-select option {
+    max-width: 100%;
+  }
+}
+
+@media (max-width: 480px) {
+  .trainer-dashboard .sidebar h3 {
+    font-size: 1.1rem;
+  }
+
+  .trainer-dashboard p {
+    font-size: 0.9rem;
+  }
+
+  .trainer-dashboard .profile-table th,
+  .trainer-dashboard .profile-table td {
+    padding: 0.4rem 0.5rem;
+    font-size: 0.85rem;
+    line-height: 1.2;
+    height: 32px;
+  }
+
+  .trainer-dashboard .profile-table tr {
+    height: 32px;
+  }
+}

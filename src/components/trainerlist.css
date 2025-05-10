@@ -1,0 +1,66 @@
+/* Table Styles */
+.trainerTable {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 20px 0;
+    background: #fff;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  }
+  
+  .trainerTable th,
+  .trainerTable td {
+    padding: 12px;
+    text-align: left;
+    border-bottom: 1px solid #ddd;
+  }
+  
+  .trainerTable th {
+    background: linear-gradient(90deg, #1e90ff, #40c4ff);
+    color: white;
+    font-weight: 600;
+  }
+  
+  .trainerTable td {
+    color: #4682b4;
+  }
+  
+  .trainerTable tr:nth-child(even) {
+    background: #f9f9f9;
+  }
+  
+  .trainerTable tr:hover {
+    background: #f1f8ff;
+  }
+  
+  /* Action Buttons */
+  .table-div {
+    display: flex;
+    gap: 10px;
+  }
+  
+  .table-div input[type="button"] {
+    padding: 6px 12px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 0.9rem;
+    transition: background 0.3s ease;
+  }
+  
+  .table-div input[value="Delete"] {
+    background: #ff6347;
+    color: white;
+  }
+  
+  .table-div input[value="Delete"]:hover {
+    background: #e74c3c;
+  }
+  
+  .table-div input[value="Update"] {
+    background: #3498db;
+    color: white;
+  }
+  
+  .table-div input[value="Update"]:hover {
+    background: #2980b9;
+  }

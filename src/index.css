@@ -1,0 +1,13 @@
+/* Global reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  /* Ensure body and html take the full width */
+  body, html {
+    width: 100%;
+    height: 100%;
+  }
+  

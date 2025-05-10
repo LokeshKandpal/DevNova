@@ -1,0 +1,165 @@
+body {
+  font-family: Arial, sans-serif;
+  background-color: #f0f8ff;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  margin: 0;
+}
+
+.main-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  padding-top: 70px; /* Offset for the header height */
+  margin: 0;
+}
+
+.login-container {
+  background-color: #ffffff;
+  padding: 2.5rem 2rem; /* Adjusted padding for a professional look */
+  border-radius: 10px; /* Slightly larger radius for a modern feel */
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1); /* Enhanced shadow for depth */
+  width: 100%;
+  max-width: 450px; /* Reduced width from 650px for a more compact look */
+  margin-top: 1rem;
+  text-align: center;
+  min-height: 400px;
+}
+
+h2 {
+  color: #1e90ff;
+  text-align: center;
+  margin-bottom: 1.5rem;
+  font-weight: 600; /* Slightly bolder for professionalism */
+}
+
+.form-group {
+  margin-bottom: 1.5rem; /* Reduced for tighter spacing */
+  text-align: left;
+}
+
+label {
+  display: block;
+  margin-bottom: 0.4rem; /* Slightly reduced for a cleaner look */
+  color: #4682b4;
+  font-size: 0.95rem; /* Slightly smaller for balance */
+  font-weight: 500; /* Medium weight for labels */
+}
+
+input[type="email"],
+input[type="password"],
+.role-dropdown {
+  width: 100%;
+  padding: 0.6rem; /* Slightly increased padding for better input feel */
+  border: 1px solid #87cefa;
+  border-radius: 6px; /* Smaller radius for a modern touch */
+  font-size: 1rem;
+  color: #000000;
+  background-color: #ffffff;
+  transition: border-color 0.3s ease, box-shadow 0.3s ease; /* Smooth transitions */
+}
+
+.role-dropdown {
+  height: 36px; /* Smaller height for the dropdown */
+  font-size: 0.9rem; /* Smaller text for the dropdown */
+  appearance: none; /* Remove default arrow */
+  background-image: url("data:image/svg+xml;charset=US-ASCII,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20width%3D%22292.4%22%20height%3D%22292.4%22%3E%3Cpath%20fill%3D%22%231e90ff%22%20d%3D%22M287%2069.4a17.6%2017.6%200%200%200-13-5.4H18.4c-5%200-9.3%201.8-12.9%205.4A17.6%2017.6%200%200%200%200%2082.2c0%205%201.8%209.3%205.4%2012.9l128%20127.9c3.6%203.6%207.8%205.4%2012.8%205.4s9.2-1.8%2012.8-5.4L287%2095c3.5-3.5%205.4-7.8%205.4-12.8%200-5-1.9-9.2-5.5-12.8z%22%2F%3E%3C%2Fsvg%3E");
+  background-repeat: no-repeat;
+  background-position: right 0.7rem center;
+  background-size: 10px; /* Smaller arrow */
+  padding-right: 2rem; /* Adjusted for smaller arrow */
+}
+
+input[type="email"],
+input[type="password"] {
+  height: 42px; /* Slightly taller inputs */
+}
+
+input[type="email"]::placeholder,
+input[type="password"]::placeholder {
+  color: #999999;
+  opacity: 1;
+}
+
+input[type="email"]:focus,
+input[type="password"]:focus,
+.role-dropdown:focus {
+  border-color: #1e90ff;
+  outline: none;
+  box-shadow: 0 0 8px rgba(30, 144, 255, 0.3); /* Enhanced focus effect */
+  color: #000000;
+}
+
+.login-button {
+  width: 100%;
+  padding: 0.7rem;
+  border: none;
+  border-radius: 6px;
+  font-size: 1rem;
+  cursor: pointer;
+  background-color: #1e90ff;
+  transition: background-color 0.3s ease, transform 0.1s ease;
+  color: white;
+  margin-top: 1.2rem;
+  height: 44px; /* Taller button */
+}
+
+.login-button:hover {
+  background-color: #082c97;
+  transform: translateY(-1px); /* Slight lift effect */
+}
+
+.forgot-password {
+  margin-top: 1.2rem;
+  text-align: center;
+  color: #4682b4;
+  font-size: 0.9rem;
+}
+
+.forgot-password a {
+  color: #1e90ff;
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+.forgot-password a:hover {
+  color: #082c97;
+}
+
+.error-message {
+  color: #ff4500;
+  background-color: #ffe4e1;
+  padding: 0.5rem;
+  border-radius: 4px;
+  margin-bottom: 1rem;
+  text-align: center;
+  font-size: 0.9rem;
+  border: 1px solid #ff6347;
+}
+
+@media (max-width: 600px) {
+  .login-container {
+    padding: 1.5rem;
+    max-width: 90%;
+  }
+  h2 {
+    font-size: 1.5rem;
+  }
+  input[type="email"],
+  input[type="password"],
+  .role-dropdown {
+    padding: 0.5rem;
+    font-size: 0.9rem;
+    height: 38px;
+  }
+  .login-button {
+    padding: 0.6rem;
+    font-size: 0.9rem;
+    height: 40px;
+  }
+  .forgot-password {
+    font-size: 0.8rem;
+  }
+}

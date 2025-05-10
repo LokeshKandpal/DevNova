@@ -1,0 +1,37 @@
+table {
+   margin-top: 1rem;
+    font-family: arial, sans-serif;
+    border-collapse: collapse;
+    width: 100%;
+  }
+
+  tr{
+    height: 5.2rem;
+  }
+  
+  td, th {
+    border: 1px solid #f4ebeb;
+    text-align: center;
+    padding: 8px;
+  }
+
+  th{
+    font-size: 1.1rem;
+    background-color: #ffffff;
+    font-weight: 600;
+  }
+  tr:nth-child(even) {
+    background-color: #ffff;
+  }
+  tr:nth-child(odd) {
+    background-image: beige;
+  }
+
+  .table-div{
+    display: flex;
+    gap:0.5rem;
+  }
+
+
+
+
